@@ -34,10 +34,13 @@ console.log('=================================================================')
 var oauth2 = require('simple-oauth2')({
     clientID: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
-    useBasicAuthorizationHeader: false,
     site: 'https://platform.lifelog.sonymobile.com/oauth/2',
     tokenPath: '/token',
-    authorizationPath: '/authorize'
+    authorizationPath: '/authorize',
+
+    // This is so the simple-oauth2 implementation doesn't authenticate
+    // using both Basic Authentication, and form parameters
+    useBasicAuthorizationHeader: false
 });
 
 // Authorization uri definition
