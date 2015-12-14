@@ -1,0 +1,29 @@
+{
+  "name": "lifelog-auth-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example of accessing a user's profile in Lifelog with OAuth2 authorization.",
+  "main": "index.js",
+  "scripts": {
+    "localtunnel": "lt -s $LOCALTUNNEL_SUBDOMAIN -p 3000",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lifelog",
+    "auth",
+    "oauth2",
+    "example"
+  ],
+  "repository": "hugojosefson/lifelog-auth-example",
+  "author": "Hugo Josefson <hugo@josefson.org>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "request": "^2.67.0",
+    "simple-oauth2": "^0.3.0"
+  },
+  "devDependencies": {
+    "localtunnel": "^1.8.0"
+  }
+}
