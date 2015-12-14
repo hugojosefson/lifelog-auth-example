@@ -28,7 +28,7 @@ npm run localtunnel
 ### An application registered with Sony Developer World
 
 Log in and create an application at
-[developer.sony.com](https://developer.sony.com/develop/services/lifelog-api/create-app/).
+[developer.sony.com/develop/services/lifelog-api/create-app/](https://developer.sony.com/develop/services/lifelog-api/create-app/).
 
 Configure its *Callback URL* so that it reflects the localtunnel name you used
 above. For example, if you set up localtunnel with the name `yourname`, this
