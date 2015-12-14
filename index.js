@@ -71,7 +71,7 @@ app.get('/callback', function (req, res) {
                 var accessToken = tokenResponse && tokenResponse.token && tokenResponse.token.access_token;
                 if (!accessToken) {
                     console.error('No access token found in response:', tokenResponse);
-                    res.status(500, 'No access token found in response');
+                    res.status(500).send('No access token found in response');
                 } else {
                     console.log('Access token:', accessToken);
                     request({
