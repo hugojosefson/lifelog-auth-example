@@ -48,7 +48,7 @@ new set of credentials.
 
 
 ```bash
-export BASE_URI=https://your.server.tld  # The https URL where your site is available. Same as Callback URL, but without /callback
+export BASE_URI=https://your.server.tld  # The https URL where your site is available. Like Callback URL, but without /callback
 export PORT=3000                         # to optionally set which port your server should listen on (default is 3000)
 export CLIENT_ID=your_client_id          # The Client ID you received from Developer World when creating your app.
 export CLIENT_SECRET=your_client_secret  # The Client Secret you received from Developer World when creating your app.
