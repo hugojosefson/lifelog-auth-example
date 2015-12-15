@@ -12,9 +12,12 @@ if (!CLIENT_ID || !CLIENT_SECRET) {
 }
 
 var LOCALTUNNEL_SUBDOMAIN = process.env.LOCALTUNNEL_SUBDOMAIN;
-var BASE_URI = process.env.BASE_URL || LOCALTUNNEL_SUBDOMAIN ? 'https://' + LOCALTUNNEL_SUBDOMAIN + '.localtunnel.me' : undefined;
+var BASE_URI = LOCALTUNNEL_SUBDOMAIN ? 'https://' + LOCALTUNNEL_SUBDOMAIN + '.localtunnel.me' : process.env.BASE_URI;
 
-if (!BASE_URI || BASE_URI.substring(0, 8) !== 'https://') {
+if (BASE_URI && BASE_URI.substring(0, 7) === 'http://') {
+  console.log('HTTP urls are only supported for localhost!!!');
+  console.log('I hope you know what you are doing!');
+} else if (!BASE_URI || BASE_URI.substring(0, 8) !== 'https://') {
     throw new Error("Must set BASE_URI in env to your server's https url (or use localtunnel and set LOCALTUNNEL_SUBDOMAIN).");
 }
 
